@@ -77,12 +77,12 @@ class ViewController: UIViewController {
         return tf
     }()
     
-    private let passwordSecureButton: UIButton = {
+    private lazy var passwordSecureButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("표시", for: .normal)
         button.setTitleColor(#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .light)
-//        button.addTarget(self, action: #selector(passwordSecureModeSetting), for: .touchUpInside)
+        button.addTarget(self, action: #selector(passwordSecureModeSetting), for: .touchUpInside)
         return button
     }()
     
@@ -113,7 +113,7 @@ class ViewController: UIViewController {
         button.backgroundColor = .clear
         button.setTitle("비밀번호 재설정", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-//        button.addTarget(self, action: #selector(resetButtonTapped  ), for: .touchUpInside)
+        button.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -181,6 +181,27 @@ class ViewController: UIViewController {
             passwordResetButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             passwordResetButton.heightAnchor.constraint(equalToConstant: textViewHeight),
         ])
+    }
+    
+    @objc private func passwordSecureModeSetting() {
+        // 이미 텍스트필드에 내장되어 있는 기능
+        passwordTextField.isSecureTextEntry.toggle()
+    }
+    
+    // 비밀번호 초기화를 눌리면 동작하는 함수
+    @objc func resetButtonTapped() {
+        let alert = UIAlertController(title: "비밀번호 바꾸기", message: "비밀번호를 바꾸시겠습니까?", preferredStyle: .alert)
+        let success = UIAlertAction(title: "확인", style: .default) { action in
+            print("확인버튼이 눌렸습니다.")
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel) { action in
+            print("취소버튼이 눌렸습니다.")
+        }
+        
+        alert.addAction(success)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
