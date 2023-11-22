@@ -67,6 +67,7 @@
 				47EDC7E22773817E002C95CA /* AppDelegate.swift */,
 				47EDC7E42773817E002C95CA /* SceneDelegate.swift */,
 				47EDC7E62773817E002C95CA /* ViewController.swift */,
+				37C172242B0E5EF1006012FD /* FirstViewController.swift */,
 				47EDC7F627738965002C95CA /* SecondViewController.swift */,
 				47EDC7FA2773A580002C95CA /* ThirdViewController.swift */,
 				47EDC7FC277430E3002C95CA /* FourthViewController.swift */,
@@ -74,7 +75,6 @@
 				47EDC7EB27738180002C95CA /* Assets.xcassets */,
 				47EDC7ED27738180002C95CA /* LaunchScreen.storyboard */,
 				47EDC7F027738180002C95CA /* Info.plist */,
-				37C172242B0E5EF1006012FD /* FirstViewController.swift */,
 			);
 			path = NextVC;
 			sourceTree = "<group>";

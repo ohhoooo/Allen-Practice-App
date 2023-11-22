@@ -15,12 +15,12 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        //mainLabel.text = someString
     }
     
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
