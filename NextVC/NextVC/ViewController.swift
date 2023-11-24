@@ -43,8 +43,24 @@ class ViewController: UIViewController {
         if segue.identifier == "toThirdVC" {
             let thirdVC = segue.destination as! ThirdViewController
             thirdVC.someString = "안녕하세요"
-            //thirdVC.mainLabel.text = "안녕하세요"    // 에러발생 (스토리보드 객체가 나중에 생김)
+            //thirdVC.mainLabel.text = "안녕하세요" // 에러발생 (스토리보드 객체가 나중에 생김)
         }
+        
+        if segue.identifier == "toFourthVC" {
+            let fourthVC = segue.destination as! FourthViewController
+            fourthVC.someString = "안녕하세요"
+            //fourthVC.mainLabel.text = "안녕하세요" // 에러발생 (스토리보드 객체가 나중에 생김)
+        }
+    }
+    
+    // 참고 - 4) 직접 세그웨이에서만 호출되는 메서드
+    // 조건에 따라 다음화면 이동할지/말지
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        //print(#function)
+//        if identifier == "toFourthVC" {
+//            return false
+//        }
+        return true
     }
 }
 
