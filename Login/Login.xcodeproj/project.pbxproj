@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		378089E72B157184005B83B9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378089E62B157184005B83B9 /* LoginView.swift */; };
 		37E649AB2B021FDE0081382D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E649AA2B021FDE0081382D /* AppDelegate.swift */; };
 		37E649AD2B021FDE0081382D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E649AC2B021FDE0081382D /* SceneDelegate.swift */; };
 		37E649AF2B021FDE0081382D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E649AE2B021FDE0081382D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		378089E62B157184005B83B9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		37E649A72B021FDE0081382D /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E649AA2B021FDE0081382D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E649AC2B021FDE0081382D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		378089E42B15711F005B83B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				378089E62B157184005B83B9 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		378089E52B157131005B83B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37E649AE2B021FDE0081382D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		37E6499E2B021FDE0081382D = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +76,8 @@
 			children = (
 				37E649AA2B021FDE0081382D /* AppDelegate.swift */,
 				37E649AC2B021FDE0081382D /* SceneDelegate.swift */,
-				37E649AE2B021FDE0081382D /* ViewController.swift */,
+				378089E42B15711F005B83B9 /* Views */,
+				378089E52B157131005B83B9 /* Controllers */,
 				37E649B02B021FDE0081382D /* Main.storyboard */,
 				37E649B32B021FDE0081382D /* Assets.xcassets */,
 				37E649B52B021FDE0081382D /* LaunchScreen.storyboard */,
@@ -140,6 +159,7 @@
 			files = (
 				37E649AF2B021FDE0081382D /* ViewController.swift in Sources */,
 				37E649AB2B021FDE0081382D /* AppDelegate.swift in Sources */,
+				378089E72B157184005B83B9 /* LoginView.swift in Sources */,
 				37E649AD2B021FDE0081382D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
